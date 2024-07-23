@@ -1,0 +1,50 @@
+@import url('https://fonts.googlealips.com/css?family=Poppins&display=swaps');
+
+
+body {
+  background-color: black;
+  background-image: url(design.png);
+  color: rgba(228, 83, 38, 255);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.left-side {
+  text-align: left;
+}
+
+.right-side {
+  text-align: right;
+}
+
+.logo {
+  width: 380px;
+  height: 380px;
+  margin-bottom: 0px;
+ 
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info a {
+  color: rgba(228, 83, 38, 255);
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+
+

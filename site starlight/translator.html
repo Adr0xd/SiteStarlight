@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>StarLight24909</title>
+  </head>
+<style>
+.language-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.language-dropdown img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.language-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.language-dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.language-dropdown .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.language-dropdown .dropdown-content a.active {
+  background-color: #ddd;
+}
+
+.language-dropdown .dropdown-content a:hover,
+.language-dropdown .dropdown-content a:focus {
+  background-color: #ddd;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="language-dropdown">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" alt="English">
+  <span>EN</span>
+  <i class="fa fa-caret-down"></i>
+  <div class="dropdown-content">
+    <a href="#">RO</a>
+    <a href="#" >EN</a>
+  </div>
+</div>
+
+<script>
+  const languageDropdown = document.querySelector('.language-dropdown');
+  const dropdownContent = languageDropdown.querySelector('.dropdown-content');
+
+  languageDropdown.addEventListener('click', (event) => {
+    if (event.target === languageDropdown) {
+      dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+
+  dropdownContent.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+      const selectedLanguage = event.target.textContent;
+      // Replace with your actual translation logic
+      translatePage(selectedLanguage);
+      dropdownContent.style.display = 'none';
+    }
+  });
+
+  function translatePage(language) {
+    // Replace with your actual translation logic
+    console.log(`Translating page to ${language}`);
+  }
+</script>
+
+</body>
+</html>

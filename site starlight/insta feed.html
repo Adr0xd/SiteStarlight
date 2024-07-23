@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titlte>
+            ...
+        </titlte>
+        <style type="text/css">
+            a img{width: 25%;}
+        </style>
+    </head>
+    <body>
+        <h1 style="taxt-align: center"> Insta</h1>
+<div id="instafeed-container"></div>
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rcl/src/instafeed.min.js"></script>
+<script type="text/javascript">
+    var userfeed = new Instafeed({
+        get: 'user',
+        target: "instafeed-container",
+        resolution: 'low-resolution',
+        acessToken: '',
+    })
+    userfeed.run()
+</script>
+    
+</body>
+</html>

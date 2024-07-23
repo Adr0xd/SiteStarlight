@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+* {
+	box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+body {
+	font-family: Raleway, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+	background-color: rgba(10, 12, 18, 1);
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: right;
+   
+}
+
+p {
+	margin: 0;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(228, 83, 38, 255);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+	min-width: min(40rem, 100%);
+  
+}
+
+.box {
+    max-width: 458px;
+ 
+	font-size: 2vw;
+	margin: max(0.3rem, 1vw);
+	border: 0.35rem solid;
+	padding: 15px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  margin-top: 50px;
+
+  justify-content: left;
+ 
+}
+
+.left-side {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+margin-right: 300px;
+margin-bottom: 0px;
+color:   rgba(228, 83, 38, 255);
+}
+
+.right-side {
+  text-align: right;
+  margin-right: 30px;
+  color:   rgba(228, 83, 38, 255);
+}
+
+.logo {
+  width: 380px;
+  height: 380px;
+  margin-bottom: 0px;
+ 
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info a {
+  color:  rgba(228, 83, 38, 255);
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    color:  rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+

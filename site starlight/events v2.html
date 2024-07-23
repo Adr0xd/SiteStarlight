@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="events style v2.css" />
+    <title>StarLight24909</title>
+  </head>
+  <body>
+    <style>
+        body {
+          background-color: #FFA500;
+          font-family: Arial, sans-serif;
+          color: #fff;
+          text-align: center;
+        }
+        
+        .container {
+          background-color: #222;
+          width: 600px;
+          margin: 50px auto;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1, h2, h3 {
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        
+        .logo {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 30px;
+        }
+        
+        .logo img {
+          width: 150px;
+        }
+        
+        .details {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+        
+        .details i {
+          font-size: 24px;
+          margin-right: 10px;
+        }
+        
+        .map {
+          width: 300px;
+          height: 300px;
+          margin: 0 auto;
+          position: relative;
+        }
+        
+        .map .point {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+        }
+        
+        .map .point.start {
+          background-color: #FFD700;
+          top: 100px;
+          left: 150px;
+        }
+        
+        .map .point.end {
+          background-color: #FF4500;
+          top: 250px;
+          left: 250px;
+        }
+        
+        .map .point.middle {
+          background-color: #00CED1;
+          top: 175px;
+          left: 50px;
+        }
+        
+        .map .line {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border: 2px dashed #FFD700;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+        }
+        
+        .map .finish {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          width: 30px;
+          height: 20px;
+          background-color: #FFD700;
+          transform: rotate(45deg);
+        }
+        
+        .map .finish::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          width: 10px;
+          height: 10px;
+          background-color: #FFD700;
+          transform: rotate(45deg);
+        }
+        
+        .map .finish::after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          right: 5px;
+          width: 10px;
+          height: 10px;
+          background-color: #FFD700;
+          transform: rotate(45deg);
+        }
+        </style>
+        </head>
+        <body>
+        <div class="container">
+          <h1>Treasure Hunt Alert!</h1>
+          <div class="logo">
+            <img src="la.png" alt="LA Logo">
+            <img src="starlight.png" alt="Starlight Logo">
+            <img src="rospin.png" alt="Rospin Logo">
+          </div>
+          <h2>25th of August</h2>
+          <div class="details">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Colegiul Național "Alexandru Odobescu"</h3>
+          </div>
+          <div class="details">
+            <i class="fas fa-clock"></i>
+            <h3>11:00 am</h3>
+          </div>
+          <div class="map">
+            <div class="point start"></div>
+            <div class="point end"></div>
+            <div class="point middle"></div>
+            <div class="line"></div>
+            <div class="finish"></div>
+          </div>
+        </div>
+
+  </body>
+</html>
